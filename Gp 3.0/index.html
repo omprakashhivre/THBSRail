@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Train Booking System - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link rel="stylesheet" href="teamcss.css">
+
+  <!-- ratings tmp -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="feedback.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+  <!-- Favicons -->
+  <link href="C:\Users\user79\Desktop\THBSRail_official-project\ZIP\Gp\image\icon.jpg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+</head>
+
+<body onload="checkloginstatus()">
+  <button class="open-button" onclick="openForm()">Feedback</button>
+
+    <div class="form-popup" id="myForm">
+      <button type="button" style="background-color: transparent;padding: 2px 2px;width: 25px;margin-top: 2px;position: absolute;right: 0ch;border: 2px solid black;border-radius: 10px;" onclick="closeForm()">X</button>
+      <form class="form-container">
+        <h1>Feedback</h1>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" id="email" required>
+
+        <label for="psw"><b>Name</b></label>
+        <input type="text" placeholder="Enter Name" id="name" required>
+
+        <label for="psw"><b>Comment</b></label>
+        <textarea rows = "5" cols = "25" name = "description" id="comment" required>
+                
+        </textarea>
+        <br>
+        <span class="ratingDisplay" id="ratingStars">
+          <span id="r1" class="star glyphicon glyphicon-star-empty" aria-hidden="true" value="1"></span>
+          <span id="r2" class="star glyphicon glyphicon-star-empty" aria-hidden="true" value="2"></span>
+          <span id="r3" class="star glyphicon glyphicon-star-empty" aria-hidden="true" value="3"></span>
+          <span id="r4" class="star glyphicon glyphicon-star-empty" aria-hidden="true" value="4"></span>
+          <span id="r5" class="star glyphicon glyphicon-star-empty" aria-hidden="true" value="5"></span>
+          </span><br />
+            <span class="ratingDisplay">
+              <span id="showNumRating"></span> ratings,
+              <span id="showAvgRating"></span> out of 5 stars
+            </span><br /><br />
+            <span id="modalButtons">
+        <button onclick="submitfeedback()" class="btn">Submit Feedback</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">THBSPROJECT<span>.</span></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">Search Results</a></li>
+          <li class="dropdown" aria-disabled="true"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Services</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Verified User</a></li>
+                  <li><a href="#">Printable Tickets</a></li>
+                  <li><a href="#">Book on Time</a></li>
+                  <li><a href="#">No service issue</a></li>
+                  <li><a href="#"> Strong Support</a></li>
+                </ul>
+              </li>
+              <li><a href="#">User Friendly</a></li>
+              <li><a href="#">CORS</a></li>
+              <li><a href="#">Paymets</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact </a></li>
+          <li><a class="nav-link scrollto" onclick="openForm()" href="#feedback">Suggetion/grievance</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="LoginforTrainProject\loginview.html" id="login-btn" class="get-started-btn scrollto " style="border: 2px solid gold;">Log in or Sign
+        up</a>
+      <!-- <a href="javascript:logout()" id="logout-btn" class="get-started-btn scrollto" style="display: none;">Logout</a> -->
+      <!-- <a href="javascript:logout()" id="logout-btn" class="get-started-btn scrollto" style="border-radius: 30px;background-image:'';"><button>Logout</button></a> -->
+      <!-- Button trigger modal -->
+      <button type="button" class="btn text-warning" style="display: none;border: 2px solid gold;" data-toggle="modal" id="logout-btn" data-target="#exampleModal" onclick="xc098()">
+        Profile
+      </button>
+
+      <!-- Modal -->
+     
+    </div>
+
+  </header>
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8">
+          <h1>Train Reservation System<span>.</span></h1>
+          <h2>One page many solution</h2>
+        </div>
+      </div>
+
+      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="fa fa-train"></i>
+            <h3><a href="Trainindex.html">Book a Ticket</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="fa fa-ticket"></i>
+            <h3><a href="PNRindex.html">Search Ticket</a></h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+          <div class="container-fluid">
+            <div class="row justify-content-center">
+              <div class="col-12 col-sm-8 col-lg-12">
+                <!-- Section Heading-->
+                <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s"
+                  style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                  <h3>Our Creative <span> Team</span></h3>
+                  <p>Appland is completely creative, lightweight, clean &amp; super responsive app landing page.</p>
+                  <div class="line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Single Advisor-->
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s"
+                  style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                  <!-- Team Thumb-->
+                  <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="">
+                    <!-- Social Info-->
+                    <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i
+                          class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                  </div>
+                  <!-- Team Details-->
+                  <div class="single_advisor_details_info">
+                    <h6>Archit Dash</h6>
+                    <p class="designation">Team Leader &amp; Developer</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Advisor-->
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s"
+                  style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                  <!-- Team Thumb-->
+                  <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="">
+                    <!-- Social Info-->
+                    <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i
+                          class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                  </div>
+                  <!-- Team Details-->
+                  <div class="single_advisor_details_info">
+                    <h6>Arunkumar Chowdappa</h6>
+                    <p class="designation">UI Designer</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Advisor-->
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.4s"
+                  style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">
+                  <!-- Team Thumb-->
+                  <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
+                    <!-- Social Info-->
+                    <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i
+                          class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                  </div>
+                  <!-- Team Details-->
+                  <div class="single_advisor_details_info">
+                    <h6>Naveen Sharma</h6>
+                    <p class="designation">Developer </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Single Advisor-->
+              <div class="col-12 col-sm-6 col-lg-3">
+                <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.5s"
+                  style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                  <!-- Team Thumb-->
+                  <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="">
+                    <!-- Social Info-->
+                    <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i
+                          class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                  </div>
+                  <!-- Team Details-->
+                  <div class="single_advisor_details_info">
+                    <h6>Nitin Dornala</h6>
+                    <p class="designation">Co-worker</p>
+                  </div>
+                </div>
+              </div>
+              <center>
+                <div class="col-12 col-sm-6 col-lg-4">
+                  <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.3s"
+                    style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <!-- Team Thumb-->
+                    <div class="advisor_thumb"><img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
+                      <!-- Social Info-->
+                      <div class="social-info"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i
+                            class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                    </div>
+                    <!-- Team Details-->
+                    <div class="single_advisor_details_info">
+                      <h6>Omprakash Hivre</h6>
+                      <p class="designation">XC</p>
+                    </div>
+                  </div>
+                </div>
+              </center>
+            </div>
+          </div>
+          <!-- <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <h3>This project is done by GROUP 5</h3>
+          </div> -->
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6">
+              <div class="footer-info">
+                <h3>THBSPROJECT<span>.</span></h3>
+                <p>
+                  Sona Towers, Millers Rd, <br>
+                  Bengaluru, Karnataka 560052<br><br>
+
+                  <strong>Phone:</strong> +91 88884499**<br>
+                  <strong>Email:</strong> info@example.com<br>
+                </p>
+                <div class="social-links mt-3">
+                  <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                  <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                  <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                  <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                  <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Group 5 Members</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Archit Dash</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Nitin Dornala</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Arun Chowdappa</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Omprakash Hivre</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Naveen Sharma</a></li>
+              </ul>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Accepting user data</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Booking Tickets from user</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Generating PNR</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Downloading Ticket</a></li>
+                <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li> -->
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>THBSRail</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://www.torryharris.com/">THBS private ltd.</a>
+        </div>
+      </div>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: rgb(58, 57, 57); color: blanchedalmond;">
+              <h5 class="modal-title" id="exampleModalLabel">User Profile</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="card" style="background-color: rgb(44, 44, 44); color: blanchedalmond;">
+                <img src="image/149071.png" alt="John" style="width:100%">
+                <h1 id="card-name">XXXX XXXXXX</h1>
+                <p id="card-mail"></p>
+                <div style="margin: 24px 0;">
+                </div>
+                <h1><button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="window.location.href='history.html'">History</button></h1>
+
+                <h1><button type="button" class="btn btn-danger" data-dismiss="modal" onclick="logout()" target="_blank">Logout</button></h1>
+              </div>
+              </div>
+            </div>
+            <div class="modal-footer" >
+              <!-- <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="logout()">Logout</button> -->
+              <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      </main>
+    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button> -->
+</body>
+<script src="js/iscript.js"></script>
+<script>
+  function logout() {
+    document.getElementById("logout-btn").style.display = "none"
+    document.getElementById("login-btn").style.display = "contents"
+    localStorage.clear();
+  }
+  function checkloginstatus() {
+    console.log("onload check")
+    if (localStorage.getItem("email") && localStorage.getItem("password")) {
+      document.getElementById("logout-btn").style.display = "contents"
+      document.getElementById("login-btn").style.display = "none"
+    }
+   
+  }
+
+</script>
+
+</html>

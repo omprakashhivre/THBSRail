@@ -1,0 +1,73 @@
+<!-- 
+//     /*active button class onclick*/
+// $('nav a').click(function(e) {
+//   e.preventDefault();
+//   $('nav a').removeClass('active');
+//   $(this).addClass('active');
+//   if(this.id === !'payment'){
+//     $('.payment').addClass('noshow');
+//   }
+//   else if(this.id === 'payment') {
+//     $('.payment').removeClass('noshow');
+//     $('.rightbox').children().not('.payment').addClass('noshow');
+//   }
+//   else if (this.id === 'profile') {
+//     $('.profile').removeClass('noshow');
+//      $('.rightbox').children().not('.profile').addClass('noshow');
+//   }
+//   else if(this.id === 'subscription') {
+//     $('.subscription').removeClass('noshow');
+//     $('.rightbox').children().not('.subscription').addClass('noshow');
+//   }
+//     else if(this.id === 'privacy') {
+//     $('.privacy').removeClass('noshow');
+//     $('.rightbox').children().not('.privacy').addClass('noshow');
+//   }
+//   else if(this.id === 'settings') {
+//     $('.settings').removeClass('noshow');
+//     $('.rightbox').children().not('.settings').addClass('noshow');
+//   }
+// });
+
+let apiKey = "rzp_test_R8fWUqksDrS2Gp	"; -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="pay.html" method="POST">
+        <script
+            src="https://checkout.razorpay.com/v1/checkout.js"
+            data-key="rzp_test_R8fWUqksDrS2Gp	" 
+            data-amount="300" 
+            data-currency="INR"
+            data-id="999"
+            data-buttontext="Pay with Razorpay"
+            data-name="Traidev Solutions"
+            data-description="Training & Development!"
+            data-image="https://traidev.com/img/web-desgin-development.png"
+            data-prefill.name=""
+            data-prefill.email=""
+            data-prefill.contact="3333444455"
+            data-theme.color="#F37254"
+        ></script>
+        <input type="hidden" custom="Hidden Element" name="hidden">
+        </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

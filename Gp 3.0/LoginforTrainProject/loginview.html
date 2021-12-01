@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_NDtOXp78ookGeIZN8R3ie");
+        })();
+    </script>
+    <script src="script.js"></script>
+
+    <title>Login form</title>
+</head>
+
+<body onload="checklocalstorage()">
+    
+    <div class="row">
+        <!--<div class="col-md-8 mx-auto p-0">
+            <div class="card">-->
+                <div class="login-box">
+                    <div class="login-snip"> 
+                        <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+                        <label for="tab-1" class="tab">Login</label> 
+                        <input id="tab-2" type="radio" name="tab" class="sign-up">
+                        <label for="tab-2" class="tab" onclick="openform1()">Sign Up</label>
+                    
+                        <div class="login-space">
+                            <div class="login">
+                                <br>
+                                <div class="group"> <label for="Email" class="label">Username</label> <input id="email" type="email" class="input" placeholder="Enter your Email"> </div>
+                                <div class="group"> <label for="pass" class="label">Password</label> <input id="pass" type="password" class="input" data-type="password" placeholder="Enter your password"> </div>
+                                <div class="group"> <input id="check" type="checkbox" class="check" checked> <label for="check"><span class="icon"></span> Keep me Signed in</label> </div>
+                                <div class="group"> <input type="submit" class="button" value="Login" onclick="login()"> </div>
+                                <label>Login Using</label><br>
+                                    <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="#" class="fa fa-google"></a>
+                                <a href="#" class="fa fa-linkedin"></a>
+                                <div class="hr"></div>
+                                <div class="foot"> <a href="resetpassword.html">Forgot Password?</a> </div>
+                            </div>
+                            <div class="sign-up-form">
+                                <br>
+                                <div class="form-popup" id="myForm1">
+                                <div class="group"> <label for="user" class="label">Enter Email</label> <input id="signemail" type="email" class="input" placeholder="Enter your Email Address"> <br><input type="submit" class="button1" value="Verify EMail" onclick="verifyemail()"><br>
+                                <div class="group" style="display: none;" id="otpdiv"> <label for="name" class="label">Enter OTP</label> <input id="regotp" type="number" class="input" placeholder="Enter OTP received on your mail" ><br> <input type="submit" class="button1" value="Verify OTP" onclick="valid()"></div></div></div>
+                                
+                                
+                                <div class="form-popup" id="myForm">
+                                <div class="group"> <label for="name" class="label">Enter Name</label> <input id="signname" type="text" class="input" placeholder="Enter your Full name"> </div>
+                                <div class="group"> <label for="pass" class="label">Enter Password</label> <input id="signpass" type="password" class="input" data-type="password" placeholder="Enter your password"> </div>
+                                <div class="group"> <label for="cpass" class="label">Repeat Password</label> <input id="csignpass" type="password" class="input" data-type="password" placeholder="confirm your password"> </div>
+                                <div class="group"> <input type="submit" class="button" value="Sign Up" onclick="registerUser()"> </div>
+                                <div class="hr"></div>
+                                </div>
+                               <!-- <div class="foot bg-success" > <label for="tab-1">Already Member?</label> </div>-->
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

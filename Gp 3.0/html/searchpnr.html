@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/script1.js"></script>
+    <link rel="icon" href="../img/thbs-rail-title-logo.jpeg" type="image/icon type">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Search pnr</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="position:sticky">
+        <a class="navbar-brand" href="../index.html"><img src="../img/thbs-rail-body-logo-main.jpeg" alt="Home" width="76.533" height="70.026"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../index.html">Trains <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="searchpnr.html">Search Ticket</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="pass.html">Passenger</a>
+              </li>
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0"> -->
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <!-- </form> -->
+        </div>
+      </nav>
+    <div id="main-body" style="width:40%; text-align:center; padding:20px; margin:auto">
+        <input type="text" id="pnr" placeholder="Enter PNR">
+        <button type="submit" onclick="searchpnr()">Search</button><br><hr>
+        <a style="color:rgb(0, 238, 255); " onClick="(function(){document.getElementById('pnrbypid').style.display = 'contents'; })();"><abbr title="search by Passenger ID">PNR By Passenger ID</abbr></a>
+        <div id="pnrbypid" style="display: none;">
+            <div class="row">
+                <div class="col">                   
+                <input type="text" class="form-control" placeholder="Enter Passenger ID" aria-label="From" id="passid">
+                </div>
+                <div class="col">                   
+                    <input type="Submit" class="form-control" placeholder="Button" aria-label="button" id="pidbtn" onclick="pnrbypid()">
+                    </div>
+                </div>
+            </div>
+            <div id="showticket">
+                <div id="print">
+    
+                </div>
+                
+            </div>
+        </div>
+    <div>
+        <h3 style="text-align: center;">IMPORTANT PASSENGER INFORMATION:- PLEASE NOTE</h3>
+        <ul>
+            <li> Opting for VIKALP does not mean that confirmed berth will be provided to passengers in
+                alternate train. It is subject to train and berth availability.
+            </li>
+            <li> Once confirmed in Alternate train, Cancellation charges will be as per your berth/train status
+                in alternate train. In this scheme, your boarding and terminating station might change to nearby
+                cluster stations.</li>
+            <li>You can be transferred to any alternate train opted and departing between 30 minutes to 72 Hours
+                from the scheduled departure of original train, in which you have booked.</li>
+            <li>
+                Option of VIKALP scheme is available at later stage before charting also through booked ticket
+                history link.
+                Please check PNR status after charting.</li>
+            </ul>
+    </div>
+</body>
+
+</html>

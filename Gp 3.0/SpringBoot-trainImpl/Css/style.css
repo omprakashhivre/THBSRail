@@ -1,0 +1,131 @@
+#signup-form{
+    margin:auto;
+    width: 40%;
+    padding: 20px 20px 20px 20px;
+
+    text-align:center;
+    color: cornsilk;
+    background-color: darkgoldenrod;
+    border: 1px solid white;
+}
+html {
+    background: rgb(126, 64, 75);
+   
+}
+
+.body-content {
+    padding-top: 14.25vh;
+}
+
+.container {
+    width: 350px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 2px solid White;
+    border-radius: 15px;
+    background: white;
+}
+h2{
+    color: rgb(87, 83, 83);
+    font-family: Arial, Helvetica, sans-serif;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item {
+    margin: 5px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.form-item label {
+    display: block;
+    padding: 2px;
+    font-size: 20px;
+    width: 100px;
+}
+
+.form-item input {
+    width: 320px;
+    height: 35px;
+    border: 2px solid #e1dede69;
+    border-radius: 20px;
+    background: #e1dede69;
+    color: grey;
+    text-align: center;
+}
+
+.form-btns {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.form-btns button {
+    margin: auto;
+    font-size: 20px;
+    padding: 5px 15px;
+    border: 2px solid;
+    border-radius: 15px;
+    color: white;
+    background: #178cc6;
+    width: 280px;
+    cursor: pointer;
+}
+
+.options {
+    padding-top: 15px;
+    margin: auto;
+}
+
+.options a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+    margin: 0 45px;
+    font-size: 14px;
+}
+.options a:hover {
+    color:grey;
+}
+hr {
+    background: grey;
+    width: 80%;
+}
+
+.login-options{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.login-options .facebook{
+    margin: auto;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 2px solid;
+    border-radius: 15px;
+    color: white;
+    background: #178cc6;
+    width: 320px;
+    cursor: pointer;
+
+}
+.login-options .google{
+    margin: auto;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: 2px solid;
+    border-radius: 15px;
+    color: white;
+    background: #c61d17;
+    width: 320px;
+    cursor: pointer;
+}
+
