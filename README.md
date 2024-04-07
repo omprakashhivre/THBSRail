@@ -29,5 +29,17 @@ Welcome to the Train Ticket Reservation System project! This system allows users
 git clone [https://github.com/your-username/train-ticket-reservation.git](https://github.com/omprakashhivre/THBSRail.git)
 ```
 
+## Project Structure
+
+This project is divided into two main folders:
+
+### GP3 (Frontend)
+
+The `GP3` folder contains the frontend code written in HTML, CSS, and JavaScript. It includes the user interface for the train ticket reservation system.
+
+### railwayTHBS (Backend)
+
+The `railwayTHBS` folder contains the backend code written in Java using the Spring Boot framework. All APIs related to user authentication, train booking, PNR generation, and email notifications are implemented in this backend application.
+
 
 Team Members - Omprakash Hivre,Archit dash,Arunkumar,Nitin Dornala,Naveen Sharma
